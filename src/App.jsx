@@ -1,14 +1,34 @@
+import { Header } from "./Header";
+import { Total } from "./Total";
+import { Content } from "./content";
 
-// import './App.css'   
-
-function App() {
-  const name = "jonathan"
+const App = () => {
+  const course = "Half Stack application development";
+  const part1 = "Fundamentals of React";
+  const exercises1 = 10;
+  const part2 = "Using props to pass data";
+  const exercises2 = 7;
+  const part3 = "State of a component";
+  const exercises3 = 14;
 
   return (
-    <>
-    <h1>hello {name}</h1>
-    </>
-  )
-}
+    <div>
+      <Header course={course} />
 
-export default App
+      <p>
+     
+        <Content part1={part1} exercises1={exercises1} />
+      </p>
+      <p>
+        <Content part2={part2} exercises2={exercises2} />
+      </p>
+
+      <p>
+        <Content part3={part3} exercises3={exercises3} />
+      </p>
+      <Total exercises1={exercises1} exercises2={exercises2} exercises3={exercises3} />
+    </div>
+  );
+};
+
+export default App;
