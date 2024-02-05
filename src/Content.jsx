@@ -1,10 +1,4 @@
-export const Part = ({ part, exercises }) => {
-  return (
-    <p>
-      {part} {exercises}
-    </p>
-  );
-};
+import {Part} from "./part.jsx";
 
 export const Content = ({
   part1,
